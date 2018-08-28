@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 import Header from '../components/header'
 import './index.css'
+
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,18 +16,28 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="Header">
+      <div className= "HeaderGroup">
+      <Link to="/"><img width="50" src={require('../images/gabedsgn.png')} /></Link>
+	    <Link to="/courses">Courses</Link>
+	    <Link to="/downloads">Downloads</Link>
+	    <Link to="/workshops">Workshops</Link>
+	    <Link to="/buy"><button>Buy</button></Link>
+      </div>
+    </div>
+    <div>
+        <div className="Hero">
+          <div className="HeroImage">
+            <div className="HeroText">
+            <h1>I design interfaces and graphics.</h1>
+            </div>
+            <div className="HeroLine">
+            </div>
+          </div>
+        </div>
+      </div>  
       {children()}
     </div>
-  </div>
 )
 
 Layout.propTypes = {

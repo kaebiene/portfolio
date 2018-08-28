@@ -12,9 +12,10 @@ a {
 
 .Hero {
   height: 920px;
-  background: url('../images/wallpaper3.jpg');
+  background: white;
   background-size: cover;
   background-position: center;
+
 }
 
 .HeroGroup {
@@ -26,9 +27,18 @@ a {
 
 .Hero h1 {
   margin: 0;
-  color: white;
-  font-size: 60px;
+  color: black;
+  font-size: 80px;
   line-height: 1.2;
+  padding: 200px 150px;
+}
+
+.Hero h2 {
+  margin: 0;
+  color: orange;
+  font-size: 80px;
+  line-height: 1.2;
+  padding: 200px 150px;
 }
 
 .Hero p {
@@ -46,4 +56,24 @@ a {
   padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
+}
+
+
+hr {
+  size: 100px;
+  color: black; 
+}
+/* this hides the 3rd link if the width goes below 640px*/
+@media (max-width: 640px) {
+  .HeroGroup {
+	padding: 100px 20px;
+  }
+
+  .Hero h1 {
+	font-size: 40px;
+  }
+
+  .Hero p {
+	font-size: 24px;
+  }
 }
